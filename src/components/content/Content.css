@@ -1,0 +1,8 @@
+.Content{
+    display: flex;
+    justify-content: center;
+}
+
+.Content li{
+    list-style: none;
+}
