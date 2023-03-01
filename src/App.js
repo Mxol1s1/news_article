@@ -21,13 +21,11 @@ function App() {
       .then((response) =>{
 
         setArticles(response.data)
+      }).catch((error) =>{
+         setFetchError(error.message)
       })
-    }catch(error){
-        setFetchError(error.message)
-        console.log(error.message)
-
     }finally{
-      setLoading(false)
+        setLoading(false)
     }
 
 }, [])
@@ -41,7 +39,8 @@ function App() {
       <NavBar/>
       <Header/>
       <main>
-        {fetchError && <p style={{color:"red"}} >
+        {fetchError && <p style={{
+          color:"red" ,textAlign:"center" }} >
           Error: Please try and reload page</p>
         }
         {loading && <p>Loading Articles...</p>}
