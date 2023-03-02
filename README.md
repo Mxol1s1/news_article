@@ -1,7 +1,6 @@
 # Mini-Crunch Articles
 
-React articles web app that fetches articles from techcrunch website using
-the public REST API from (wp-json) data and diplays the title, date, summary and link to the full article
+A news articles highlights project made in Reactjs. The data for the news comes from a wordpress site Techcrunch. Using Axios HTTP , the data is requested from the public wordpress api site in wp-json format. The data comes embedded with HTML tags which poses the risk of malicious attacks via xss (cross site scripting), to clean the data - a Dompurify was used. The project diplays a list of articles in each article the image , title, date, summary and link to the full article is diplayed. 
 
 ## Available Scripts
 
